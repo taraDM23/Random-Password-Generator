@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h1>
+        Password Generator
+    </h1>
+    <section class=container>
+        <div class=row>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <section id="userinput">
+                    <div>
+                        <textarea type="text" id="output" class="form-control" rows="5"></textarea>
+                        <p> Here's your random pw </p>
+                        <input type="range" min="8" max="128" value="8" class="slider" id="slider">
+                        <p id="ShowNum">Character Length:</p>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="" onclick="" id=LowerCase>Lower Case</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="" onclick="" id=UpperCase>Upper Case</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="" onclick="" id=Special> Special Characters</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="" onclick="" id=Numeric>Numbers</label>
+                    </div>
+
+                    <br>
+                    <input type="button" value="Generate" id="submit" onclick="generate()">
+
+                    <input type="button" value="Copy" id="copy-button" onclick="">
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
