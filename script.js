@@ -7,10 +7,17 @@ var CharacterArray = [
     ["!\"#$%'()*+,-./:=>?@[\\]/^_`{|}~"]
 ];
 
-var Numeric = document.getElementById("Numeric");
+
+// slider choice
+var slider = document.getElementById("slider");
+var output = document.getElementById("ShowNum");
+output.innerHTML = slider.value;
+
+slider.oninput = function () {
+output.innerHTML = slider.value;
+}
 
 //generation
-
 function generate() {
     console.log("Test");
     let compexity = document.getElementById("slider").value;
