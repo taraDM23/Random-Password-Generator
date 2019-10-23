@@ -11,19 +11,19 @@
 </head>
 
 <body>
-
+<br/>
     <h1>
         Password Generator
     </h1>
-    <section class=container>
+    <section class=container id="userinput">
         <div class=row>
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <section id="userinput">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <section>
+                    <h3>Select Options</h3>
                     <div>
-                        <textarea type="text" id="output" class="form-control" rows="5"></textarea>
-                        <p> Here's your random pw </p>
                         <input type="range" min="8" max="128" value="8" class="slider" id="slider">
-                        <p id="ShowNum">Character Length:</p>
+                        <br />
+                        <label> Character Length:<p id="ShowNum"></p></label>
                     </div>
                     <div class="checkbox">
                         <label><input type="checkbox" value="" onclick="" id=LowerCase>Lower Case</label>
@@ -37,16 +37,27 @@
                     <div class="checkbox">
                         <label><input type="checkbox" value="" onclick="" id=Numeric>Numbers</label>
                     </div>
+                    <br />
+                    <h3>Generate Password</h3>
+                    <hr>
+                    <div>
+                        <textarea type="text" id="output" class="form-control" rows="5"
+                            placeholder="Your Secure Password"></textarea>
+                        <hr>
+                    </div>
+                    <br />
+                    <input type="button" value="Generate Password" id="submit" onclick="generate()">
 
-                    <br>
-                    <input type="button" value="Generate" id="submit" onclick="generate()">
-
-                    <input type="button" value="Copy" id="copy-button" onclick="">
+                    <input type="button" value="Copy to Clipboard" id="copy-button" onclick="">
+                    <br />
+                    <br />
                 </section>
             </div>
         </div>
     </section>
-
+    <br />
+    <br />
+    <br />
     <script src="script.js"></script>
 </body>
 

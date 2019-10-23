@@ -58,3 +58,35 @@ function generate() {
     document.getElementById("output").value = password;
 
 }
+
+/* Psydo
+ Step 1 - User prompts - checkbox
+
+can choose: 
+1. length  min 8 max 128
+
+js -counter - set from 8-128
+alart - if empty please select length between 8-128
+
+
+2.Character types
+Special characters ([see examples](https://www.owasp.org/index.php/Password_special_characters))
+Numeric characters
+Lowercase characters
+Uppercase characters
+
+min 1 character type
+max all 4 types
+
+alart - please select at least one charachter type
+
+Step 2 - generate password button
+-show password on page
+
+Step 3 - copy to clipboard button
+js- copy 
+
+
+
+ */
+
