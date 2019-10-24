@@ -1,12 +1,10 @@
 //User input option
-
 var CharacterArray = [
     ["0123456789"],
     ["abcdefghijklmnopqrstuvwxyz"],
     ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
     ["!\"#$%'()*+,-./:=>?@[\\]/^_`{|}~"]
 ];
-
 
 // slider choice
 var slider = document.getElementById("slider");
@@ -32,7 +30,8 @@ function Copy() {
   alert("Your Password has been copied to your clipboard");}
 }
 
-//generation
+
+//User choice
 function generate() {
     console.log("Test");
     let strength = document.getElementById("slider").value;
@@ -43,24 +42,24 @@ function generate() {
         values += CharacterArray[0];
         console.log(values);
     }
-    if (document.getElementById("UpperCase").checked == true) {
+    if (document.getElementById("UpperCase").checked) {
         values += CharacterArray[2];
         console.log(values);
     }
-    if (document.getElementById("LowerCase").checked == true) {
+    if (document.getElementById("LowerCase").checked) {
         values += CharacterArray[1];
         console.log(values);
     }
-    if (document.getElementById("Special").checked == true) {
+    if (document.getElementById("Special").checked) {
         values += CharacterArray[3];
         console.log(values);
     }
+    //Select an option alert
     else {
         alert("Please select at least one option");
    }
 
- 
-    // slider
+    // slider calculation
     var slider = document.getElementById("slider");
     var output = document.getElementById("ShowNum");
     output.innerHTML = slider.value;
@@ -70,13 +69,11 @@ function generate() {
     }
 
     // password
-
     for (var i = 0; i < strength; i++) {
         password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
     }
     document.getElementById("output").value = password;   
 }
-
 
 
 
@@ -88,7 +85,7 @@ can choose:
 1. length  min 8 max 128
 
 js -counter - set from 8-128
-alart - if empty please select length between 8-128
+alart - if empty please select length between 8-128?
 
 
 2.Character types
@@ -110,5 +107,5 @@ js- copy
 
 
 Tri notes:
-Add the alart at the start of the 
+Add the alart at the start of the code
  */

@@ -2,17 +2,29 @@ nav {
 text-align: center;
 }
 
+@media only screen and (max-width: 425px){
+#userinput{
+padding-left: 0px; 
+padding-right: 0px;
+}
+
+#options {
+padding-left: 10px;
+padding-right: 10px;
+}
+}
+
 body {
 width: 100%;
 margin-bottom: 50px;
 }
-
-
-#userinput {
+.container {
 border:1px lightgrey solid;
 padding-left: 40px;
 padding-right: 40px;
 background-color:#F9FBFD;
+display: flex;
+align-content: center;
 }
 
 #display {
@@ -23,28 +35,29 @@ border-radius: 10px;
 }
 
 #output {
-    width: 100%;
-    border: 1px lightgrey dashed;
-    border-width: 2px;
-    text-align:center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+width: 100%;
+border: 1px lightgrey dashed;
+background-color:white;
+border-width: 2px;
+text-align:center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#slider {
-    width: 100%;
+.slider {
+width: 100%;
 }
 
 input[type=checkbox] + label {
-    display: block;
-    margin: 0.2em;
-    cursor: pointer;
-    padding: 0.2em;
-  }
+display: block;
+margin: 0.2em;
+cursor: pointer;
+padding: 0.2em;
+}
   
 input[type=checkbox]{
-    width: 18px;
-    height: 16px;
-  }
+width: 18px;
+height: 16px;
+}
  
 #submit {
 background-color: #AF0808;
@@ -52,6 +65,7 @@ color: white;
 padding: 5px 20px 5px 20px;
 border-radius: 15px;
 border: 0px;
+margin-bottom: 20px;
 }
 
 #copy-button {
