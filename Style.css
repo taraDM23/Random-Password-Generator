@@ -1,4 +1,4 @@
-h1 {
+nav {
 text-align: center;
 }
 
@@ -12,6 +12,14 @@ margin-bottom: 50px;
 border:1px lightgrey solid;
 padding-left: 40px;
 padding-right: 40px;
+background-color:#F9FBFD;
+}
+
+#display {
+background-color: white;
+padding: 15px 40px 15px 40px;
+border:1px lightgrey solid;
+border-radius: 10px;
 }
 
 #output {
@@ -33,10 +41,13 @@ input[type=checkbox] + label {
     padding: 0.2em;
   }
   
-  
+input[type=checkbox]{
+    width: 18px;
+    height: 16px;
+  }
  
 #submit {
-background-color: #b31e1e;
+background-color: #AF0808;
 color: white;
 padding: 5px 20px 5px 20px;
 border-radius: 15px;
@@ -44,7 +55,7 @@ border: 0px;
 }
 
 #copy-button {
-background-color: grey;
+background-color: #C0C7CF;
 color: white;
 padding:5px 20px 5px 20px;
 border-radius: 15px;
