@@ -12,20 +12,26 @@ padding-right: 0px;
 padding-left: 10px;
 padding-right: 10px;
 }
+
+.h3 {
+font-size: 20px;
+}
 }
 
 body {
 width: 100%;
 margin-bottom: 50px;
+margin-left: auto;
+margin-right: auto;
 }
 .container {
 border:1px lightgrey solid;
 padding-left: 40px;
 padding-right: 40px;
 background-color:#F9FBFD;
-display: flex;
-align-content: center;
+
 }
+
 
 #display {
 background-color: white;
