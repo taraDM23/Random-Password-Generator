@@ -17,10 +17,25 @@ slider.oninput = function () {
 output.innerHTML = slider.value;
 }
 
+//Copy
+var CopyPW = document.getElementById("copy-button")
+
+function Copy() {
+    var copyText = document.getElementById("output");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+    document.execCommand("copy");
+   // console.log(copyText.value);
+   if (copyText.value <8){
+  alert("Please Generate your Password");}
+  else {
+  alert("Your Password has been copied to your clipboard");}
+}
+
 //generation
 function generate() {
     console.log("Test");
-    let compexity = document.getElementById("slider").value;
+    let strength = document.getElementById("slider").value;
     let values = "";
     let password = "";
 
@@ -40,10 +55,11 @@ function generate() {
         values += CharacterArray[3];
         console.log(values);
     }
-   // else {
-    //    alert("Please select an option");
-  //  }
+    else {
+        alert("Please select an option");
+   }
 
+ 
     // slider
     var slider = document.getElementById("slider");
     var output = document.getElementById("ShowNum");
@@ -52,15 +68,21 @@ function generate() {
     slider.oninput = function () {
         output.innerHTML = this.value;
     }
-    for (var i = 0; i < compexity; i++) {
+
+    // password
+
+    for (var i = 0; i < strength; i++) {
         password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
     }
-    document.getElementById("output").value = password;
-
+    document.getElementById("output").value = password;   
 }
 
-/* Psydo
- Step 1 - User prompts - checkbox
+
+
+
+
+/* Pseudo
+ Step 1 - User prompts - use checkbox
 
 can choose: 
 1. length  min 8 max 128
@@ -87,6 +109,6 @@ Step 3 - copy to clipboard button
 js- copy 
 
 
-
+Tri notes:
+Add the alart at the start of the 
  */
-
