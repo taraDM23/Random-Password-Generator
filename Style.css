@@ -24,20 +24,24 @@ margin-bottom: 50px;
 margin-left: auto;
 margin-right: auto;
 }
+
 .container {
 border:1px lightgrey solid;
 padding-left: 40px;
 padding-right: 40px;
 background-color:#F9FBFD;
-
 }
-
 
 #display {
 background-color: white;
 padding: 15px 40px 15px 40px;
 border:1px lightgrey solid;
 border-radius: 10px;
+}
+
+#options {
+margin-left: auto;
+margin-right: auto;
 }
 
 #output {
