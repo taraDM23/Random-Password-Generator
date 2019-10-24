@@ -56,7 +56,7 @@ function generate() {
         console.log(values);
     }
     else {
-        alert("Please select an option");
+        alert("Please select at least one option");
    }
 
  
