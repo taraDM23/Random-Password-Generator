@@ -99,6 +99,7 @@ function generate() {
 
 
 /* Pseudo
+
  Step 1 - User prompts - use checkbox
 
 can choose:
