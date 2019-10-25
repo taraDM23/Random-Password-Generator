@@ -79,7 +79,7 @@ function generate() {
 
     // Promt - You chose xyz please confirm options
     else {
-        var r = confirm("Continue " + "show choices");
+        var r = confirm("You have Chosen:\n" + "Chracter Count: " + strength + "\n" + "Character Types: " + values +"\n If you happy with your selection, Please click ok" );
 
         if (r == true) {
             for (var i = 0; i < strength; i++) {
