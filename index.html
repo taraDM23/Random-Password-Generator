@@ -5,22 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="Style.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 
 <body>
-    <nav>
-        <h1>Password Generator</h1>
-    </nav>
     <section class=container id="userinput">
-        <div class=row>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <div class="row justify-content-md-center">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8" id="wrapper">
+                <nav>
+                    <h1>Password Generator</h1>
+                </nav>
                 <section id="options">
                     <br />
                     <h5>To Generate a Random password please choose from the options below:</h5>
-                    <br/>
+                    <br />
                     <div class="checkbox">
                         <label><input type="checkbox" value="" onclick="" id=LowerCase>Include Lower Case
                             Characters</label>
@@ -41,22 +43,27 @@
                         <!--<p> Note that the minimum charachter lenght is 8</p>-->
                         <input type="range" min="8" max="128" value="8" class="slider" id="slider">
                         <br />
-                        <label> Character Length:<p id="ShowNum"></p></label>
+                        <p>Character Length: <span id="ShowNum">:</span></p>
                     </div>
                 </section>
                 <section id="display">
-                    <h3>Generate a Password</h3>
-                    <hr size="25px">
-                    <div>
-                        <textarea readonly type="text" id="output" class="form-control" rows="5"
-                            placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
-                        <hr size="25px">
-                    </div>
-                    <input type="button" value="Generate Password" id="submit" onclick="generate()">
-
-                    <input type="button" value="Copy to Clipboard" id="copy-button" onclick="Copy()">
-                    <br />
-                    <br />
+                    <h4>Generate a Password</h>
+                        <hr>
+                        <div>
+                            <textarea readonly type="text" id="output" class="form-control" rows="5"
+                                placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+                            <hr>
+                        </div>
+                        <div class=row>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                                <input type="button" value="Generate Password" id="submit" onclick="generate()">
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                                <input type="button" value="Copy to Clipboard" id="copy-button" onclick="Copy()">
+                            </div>
+                        </div>
+                        <br />
+                        <br />
                 </section>
                 <br />
                 <br />
@@ -68,4 +75,5 @@
     <br />
     <script src="script.js"></script>
 </body>
+
 </html>
