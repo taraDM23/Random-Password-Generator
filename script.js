@@ -39,25 +39,28 @@ function generate() {
     let strength = document.getElementById("slider").value;
     let values = "";
     let password = "";
+    let ShowOptions = "";
 
     if (document.getElementById("Numeric").checked) {
         values += CharacterArray[0];
         console.log("Numeric");
-        {if (document.getElementById("Numeric").checked = true);
-        result.confirm;
-        ) }
+        ShowOptions += "Numeric, ";
     }
+       
     if (document.getElementById("LowerCase").checked) {
         values += CharacterArray[1];
         console.log("LowerCase");
+        ShowOptions += "LowerCase, ";
     }
     if (document.getElementById("UpperCase").checked) {
         values += CharacterArray[2];
         console.log("UpperCase");
+        ShowOptions += "UpperCase, ";
     }
     if (document.getElementById("Special").checked) {
         values += CharacterArray[3];
         console.log("Special");
+        ShowOptions += "Special, ";
     }
 
     // slider calculation
@@ -82,7 +85,7 @@ function generate() {
 
     // Promt - You chose xyz please confirm options
     else {
-        var r = confirm("You have Chosen:\n" + "Chracter Count: " + strength + "\n" + "Character Types: " + values +"\n If you happy with your selection, Please click ok" );
+        var r = confirm("You have Chosen:\n" + "Chracter Count: " + strength + "\n" + "Character Types: " + ShowOptions + +"\n If you happy with your selection, Please click ok" );
 
         if (r == true) {
             for (var i = 0; i < strength; i++) {
