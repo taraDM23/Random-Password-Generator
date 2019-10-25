@@ -3,7 +3,7 @@ var CharacterArray = [
     ["0123456789"],
     ["abcdefghijklmnopqrstuvwxyz"],
     ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
-    ["!\"#$%'()*+,-./:=>?@[\\]/^_`{|}~"]
+    [" !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"]
 ];
 
 // slider choice
