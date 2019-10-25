@@ -13,7 +13,7 @@ var output = document.getElementById("ShowNum");
 output.innerHTML = slider.value;
 
 slider.oninput = function () {
-output.innerHTML = slider.value;
+    output.innerHTML = slider.value;
 }
 
 //Copy
@@ -22,15 +22,16 @@ var CopyPW = document.getElementById("copy-button")
 function Copy() {
     var copyText = document.getElementById("output");
     copyText.select();
-    copyText.setSelectionRange(0, 99999); 
+    copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
-   // console.log(copyText.value);
-   if (copyText.value <8){
-  alert("Please Generate your Password");}
-  else {
-  alert("Your Password has been copied to your clipboard");}
+    // console.log(copyText.value);
+    if (copyText.value < 8) {
+        alert("Please Generate your Password");
+    }
+    else {
+        alert("Your Password has been copied to your clipboard");
+    }
 }
-
 
 //User choice
 function generate() {
@@ -39,76 +40,62 @@ function generate() {
     let values = "";
     let password = "";
 
-    //Select an option alert
-   // if (document.querySelectorAll("#checkbox").checked = false){  
-    //alert("Please select at least one option");
-    //console.log("Test2");
-    //}
-
-    if (document.getElementById("Numeric").checked === true) {
+    if (document.getElementById("Numeric").checked) {
         values += CharacterArray[0];
-        console.log(values);
+        console.log("Numeric");
     }
-    if (document.getElementById("LowerCase").checked === true) {
+    if (document.getElementById("LowerCase").checked) {
         values += CharacterArray[1];
-        console.log(values);
+        console.log("LowerCase");
     }
-    if (document.getElementById("UpperCase").checked === true) {
+    if (document.getElementById("UpperCase").checked) {
         values += CharacterArray[2];
-        console.log(values);
+        console.log("UpperCase");
     }
-    if (document.getElementById("Special").checked === true) {
+    if (document.getElementById("Special").checked) {
         values += CharacterArray[3];
-        console.log(values);
+        console.log("Special");
     }
-   
+
     // slider calculation
     var slider = document.getElementById("slider");
     var output = document.getElementById("ShowNum");
     output.innerHTML = slider.value;
+    console.log(slider.value)
 
     slider.oninput = function () {
         output.innerHTML = this.value;
     }
-    
-/* // You chose xyz please confirm options
 
-//output.addEventListener("click", Reset);
-//console.log("clickcheck");
+    // Select an option alert
 
-//function Reset() {
-//console.log("confirmation");   
-//r = confirm("Continue!" + "show choices");
+    console.log("confirmation");
 
-
-    if (r == true) {
-        for (var i = 0; i < strength; i++) {
-            password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
-        }
-        document.getElementById("output").value = password;  
-    }  
-    
-    else {location.reload()}
-}
-} */
-
-// password
-    for (var i = 0; i < strength; i++) {
-        password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+    if ((document.getElementById("Numeric").checked == false) && (document.getElementById("LowerCase").checked == false) &&
+        (document.getElementById("UpperCase").checked == false) && (document.getElementById("Special").checked == false)) {
+        alert("Please select at least one option");
+        console.log("Test2");
     }
-    document.getElementById("output").value = password;  
-    
+
+    // Promt - You chose xyz please confirm options
+    else {
+        var r = confirm("Continue " + "show choices");
+
+        if (r == true) {
+            for (var i = 0; i < strength; i++) {
+                password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+            }
+            document.getElementById("output").value = password;
+        }
+        else { location.reload() }
+    }
 }
-
-
-
-
 
 
 /* Pseudo
  Step 1 - User prompts - use checkbox
 
-can choose: 
+can choose:
 1. length  min 8 max 128
 
 js -counter - set from 8-128
@@ -126,12 +113,12 @@ alart - please select at least one charachter type
 
 Step 2 - generate password button
 
-new - Confirm selection yes no - 
+new - Confirm selection yes no -
 yes-show password on page
 no-refresh
 
 Step 3 - copy to clipboard button
-js- copy 
+js- copy
 
 
 Tri notes:
