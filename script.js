@@ -43,6 +43,9 @@ function generate() {
     if (document.getElementById("Numeric").checked) {
         values += CharacterArray[0];
         console.log("Numeric");
+        {if (document.getElementById("Numeric").checked = true);
+        result.confirm;
+        ) }
     }
     if (document.getElementById("LowerCase").checked) {
         values += CharacterArray[1];
