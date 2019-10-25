@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <title>Random Password Generator</title>
 </head>
 
 <body>
@@ -47,23 +48,24 @@
                     </div>
                 </section>
                 <section id="display">
-                    <h4>Generate a Password</h>
+                    <div>
+                        <h4>Generate a Password</h4>
                         <hr>
-                        <div>
-                            <textarea readonly type="text" id="output" class="form-control" rows="5"
-                                placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
-                            <hr>
+
+                        <textarea readonly id="output" class="form-control" rows="5"
+                            placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+                        <hr>
+                    </div>
+                    <div class=row>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                            <input type="button" value="Generate Password" id="submit" onclick="generate()">
                         </div>
-                        <div class=row>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
-                                <input type="button" value="Generate Password" id="submit" onclick="generate()">
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
-                                <input type="button" value="Copy to Clipboard" id="copy-button" onclick="Copy()">
-                            </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                            <input type="button" value="Copy to Clipboard" id="copy-button" onclick="Copy()">
                         </div>
-                        <br />
-                        <br />
+                    </div>
+                    <br />
+                    <br />
                 </section>
                 <br />
                 <br />
