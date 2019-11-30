@@ -85,7 +85,11 @@ function generate() {
 
     // Promt - You chose xyz please confirm options
     else {
-        var r = confirm("You have Chosen:\n" + "Chracter Count: " + strength + "\n" + "Character Types: " + ShowOptions +"\n If you are happy with your selection, Please click ok" );
+      for (var i = 0; i < strength; i++) {
+                password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+            }
+            document.getElementById("output").value = password;
+        /* var r = confirm("You have Chosen:\n" + "Character Count: " + strength + "\n" + "Character Types: " + ShowOptions +"\n If you are happy with your selection, Please click ok" );
 
         if (r == true) {
             for (var i = 0; i < strength; i++) {
@@ -93,7 +97,7 @@ function generate() {
             }
             document.getElementById("output").value = password;
         }
-        else { location.reload() }
+        else { location.reload() } */
     }
 }
 
@@ -116,11 +120,11 @@ Uppercase characters
 min 1 character type
 max all 4 types
 
-alart - please select at least one charachter type
+alert - please select at least one character type
 
 Step 2 - generate password button
 
-new - Confirm selection yes no -
+**new - Confirm selection yes no -
 yes-show password on page
 no-refresh
 
